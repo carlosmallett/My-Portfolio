@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Mallett | Experience Designer</title>
+  <meta name="description" content="Portfolio landing page for Carlos Mallett, Experience Designer and Strategist." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" crossorigin href="/assets/index-CFKz1o6k.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <main class="page">
+    <section class="hero reveal">
+      <div class="hero-primary card">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Carlos Mallett</h1>
+        <p class="subtitle">~ Experience Designer and Strategist</p>
+
+        <div class="line"></div>
+
+        <ul class="facts">
+          <li>Duke University Class of 2028</li>
+          <li>Major: Visual Media Studies</li>
+          <li>Minors: Journalism and Business</li>
+        </ul>
+
+        <div class="hero-lower">
+          <article class="hero-block">
+            <h2>About</h2>
+            <p class="about-copy">
+              I'm passionate about designing customer-facing experiences that matter.
+              To me, great design is more than aesthetics -- it's about creating meaningful
+              connections between people, ideas, and the experiences that shape everyday life.
+              I strive to create work that resonates with people, builds lasting relationships,
+              and inspires them to engage, explore, and take action.
+            </p>
+          </article>
+
+          <article class="hero-block contact-block">
+            <h2>Contact</h2>
+            <div class="actions">
+              <a class="btn btn-outline" href="Mallett_Carlos_Resume.pdf" aria-label="View Resume">View Resume</a>
+              <a class="btn btn-outline" href="https://www.linkedin.com/in/carlos-mallett-7b2429272/" target="_blank" rel="noopener noreferrer" aria-label="View LinkedIn">View LinkedIn</a>
+            </div>
+
+            <ul class="contact-list">
+              <li><span>Email:</span> cm718@duke.edu</li>
+              <li><span>Phone:</span> 404 493 0675</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <aside class="hero-portrait card">
+        <div class="photo-frame" aria-label="Profile Placeholder">
+          <div class="corner tl"></div>
+          <div class="corner tr"></div>
+          <div class="corner bl"></div>
+          <div class="corner br"></div>
+          <img
+            id="profilePhoto"
+            class="profile-photo"
+            src="/assets/profile-CMq2zqO5.jpg"
+            alt="Portrait of Carlos Mallett"
+            loading="eager"
+            decoding="async"
+          />
+          <div class="avatar avatar-fallback" aria-hidden="true">
+            <div class="avatar-head"></div>
+            <div class="avatar-body"></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="collabs card reveal delay-1">
+      <div class="section-head">
+        <div class="head-line"></div>
+        <h3>Collaborations</h3>
+        <div class="head-line"></div>
+      </div>
+
+      <div class="logo-grid">
+        <div class="logo-tile">
+          <img class="logo-image" src="/assets/Breva_main_logo-s4wsDu09.png" alt="Breva AI logo" loading="lazy" decoding="async" />
+        </div>
+        <div class="logo-tile">
+          <img class="logo-image logo-image-oit" src="/assets/Duke%20OIT%20Logo-buNpxr0J.png" alt="Duke OIT logo" loading="lazy" decoding="async" />
+        </div>
+        <div class="logo-tile">
+          <img class="logo-image logo-image-tech-policy" src="/assets/Duke%20Tech%20Policy-DiBLGv1m.png" alt="Duke Tech Policy logo" loading="lazy" decoding="async" />
+        </div>
+        <div class="logo-tile">
+          <img class="logo-image logo-image-cmac" src="/assets/CMAC%20Logo-CKWyH_e9.png" alt="Duke CMAC logo" loading="lazy" decoding="async" />
+        </div>
+        <div class="logo-tile">
+          <img class="logo-image logo-image-standard" src="/assets/Standard%20Agency%20Logo-DAAEblyv.png" alt="The Standard Agency logo" loading="lazy" decoding="async" />
+        </div>
+        <div class="logo-tile">
+          <img class="logo-image logo-image-collective" src="/assets/The%20Collective%20Logo-tmfbgDJZ.png" alt="The Collective logo" loading="lazy" decoding="async" />
+        </div>
+        <div class="logo-tile">
+          <img class="logo-image logo-image-str" src="/assets/STR%20Logo-CkNd2yhB.png" alt="STR logo" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <section class="vault reveal delay-2">
+      <div class="vault-content">
+        <p class="lock">Locked Access</p>
+        <h3>View My Work</h3>
+        <p class="vault-copy">
+          This portfolio is available to recruiters, collaborators, and hiring managers via password.
+        </p>
+
+        <form id="gateForm" class="gate-form">
+          <label class="sr-only" for="password">Enter Password</label>
+          <input id="password" type="password" placeholder="Enter Password" autocomplete="off" />
+          <button type="submit">Enter</button>
+        </form>
+
+        <p id="gateMessage" class="gate-message" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
