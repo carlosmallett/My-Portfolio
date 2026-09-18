@@ -1,6 +1,3 @@
-const gateForm = document.getElementById("gateForm");
-const gateMessage = document.getElementById("gateMessage");
-const passwordInput = document.getElementById("password");
 const profilePhoto = document.getElementById("profilePhoto");
 const photoFrame = document.querySelector(".photo-frame");
 
@@ -10,27 +7,71 @@ if (profilePhoto && photoFrame) {
   });
 }
 
-if (gateForm && gateMessage && passwordInput) {
-  gateForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+const projectMap = {
+  storyweaver: {
+    title: "StoryWaver",
+    src: "Projects/story-weaver-presentation.pdf"
+  },
+  apiary: {
+    title: "Apiary",
+    src: "Projects/APIARY%20Presentation.pdf"
+  },
+  insight: {
+    title: "Insight Engine 2.0",
+    src: "Projects/Insight%20Engine%202.0%20Presentation.pdf"
+  },
+  collective: {
+    title: "The Collective",
+    src: "Projects/The%20Collective%20Brand%20Kit.pdf"
+  },
+  standardAgency: {
+    title: "Standard Agency",
+    src: "Projects/Standard%20Agency%20Presenation.pdf"
+  }
+};
 
-    const value = passwordInput.value.trim();
+const projectModal = document.getElementById("projectModal");
+const projectModalTitle = document.getElementById("projectModalTitle");
+const projectFrame = document.getElementById("projectFrame");
+const projectTriggers = document.querySelectorAll(".work-tile-trigger");
+const projectCloseButton = document.querySelector(".project-modal-close");
+const projectBackdrop = document.querySelector("[data-close-modal]");
 
-    if (!value) {
-      gateMessage.textContent = "Please enter a password.";
-      gateMessage.style.color = "#ffd7d7";
+const closeProjectModal = () => {
+  if (!projectModal) return;
+  projectModal.classList.remove("is-open");
+  projectModal.setAttribute("aria-hidden", "true");
+  if (projectFrame) {
+    projectFrame.src = "";
+  }
+};
+
+projectTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const key = trigger.dataset.project;
+    const project = projectMap[key];
+
+    if (!projectModal || !projectModalTitle || !projectFrame || !project) {
       return;
     }
 
-    if (value === "Camreddish2026") {
-      gateMessage.textContent = "Access granted. Redirecting to your work page...";
-      gateMessage.style.color = "#d6f9d6";
-      setTimeout(() => {
-        window.location.href = "work.html";
-      }, 550);
-    } else {
-      gateMessage.textContent = "Incorrect password. Please try again.";
-      gateMessage.style.color = "#ffd7d7";
-    }
+    projectModalTitle.textContent = project.title;
+    projectFrame.src = project.src;
+    projectModal.classList.add("is-open");
+    projectModal.setAttribute("aria-hidden", "false");
   });
+});
+
+if (projectCloseButton) {
+  projectCloseButton.addEventListener("click", closeProjectModal);
 }
+
+if (projectBackdrop) {
+  projectBackdrop.addEventListener("click", closeProjectModal);
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && projectModal && projectModal.classList.contains("is-open")) {
+    closeProjectModal();
+  }
+});

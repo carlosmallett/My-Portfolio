@@ -87,48 +87,146 @@
 
       <div class="logo-grid">
         <div class="logo-tile">
+          <img class="logo-image logo-image-westway" src="images/Westway Logo.webp" alt="Westway logo" loading="lazy" decoding="async" />
+        </div>
+        <div class="logo-tile">
           <img class="logo-image" src="images/Breva_main_logo.png" alt="Breva AI logo" loading="lazy" decoding="async" />
-        </div>
-        <div class="logo-tile">
-          <img class="logo-image logo-image-oit" src="images/Duke OIT Logo.png" alt="Duke OIT logo" loading="lazy" decoding="async" />
-        </div>
-        <div class="logo-tile">
-          <img class="logo-image logo-image-tech-policy" src="images/Duke Tech Policy.png" alt="Duke Tech Policy logo" loading="lazy" decoding="async" />
-        </div>
-        <div class="logo-tile">
-          <img class="logo-image logo-image-cmac" src="images/CMAC Logo.png" alt="Duke CMAC logo" loading="lazy" decoding="async" />
         </div>
         <div class="logo-tile">
           <img class="logo-image logo-image-standard" src="images/Standard Agency Logo.png" alt="The Standard Agency logo" loading="lazy" decoding="async" />
         </div>
         <div class="logo-tile">
-          <img class="logo-image logo-image-collective" src="images/The Collective Logo.png" alt="The Collective logo" loading="lazy" decoding="async" />
+          <img class="logo-image logo-image-oit" src="images/Duke OIT Logo.png" alt="Duke OIT logo" loading="lazy" decoding="async" />
         </div>
         <div class="logo-tile">
           <img class="logo-image logo-image-str" src="images/STR Logo.png" alt="STR logo" loading="lazy" decoding="async" />
         </div>
+        <div class="logo-tile">
+          <img class="logo-image logo-image-tech-policy" src="images/Duke Tech Policy.png" alt="Duke Tech Policy logo" loading="lazy" decoding="async" />
+        </div>
+        <div class="logo-tile">
+          <img class="logo-image logo-image-collective" src="images/The Collective Logo.png" alt="The Collective logo" loading="lazy" decoding="async" />
+        </div>
+        <div class="logo-tile">
+          <img class="logo-image logo-image-cmac" src="images/CMAC Logo.png" alt="Duke CMAC logo" loading="lazy" decoding="async" />
+        </div>
       </div>
     </section>
 
-    <section class="vault reveal delay-2">
-      <div class="vault-content">
-        <p class="lock">Locked Access</p>
-        <h3>View My Work</h3>
-        <p class="vault-copy">
-          This portfolio is available to recruiters, collaborators, and hiring managers via password.
-        </p>
+    <section class="work-page reveal delay-2">
+      <header class="work-header card">
+        <p class="work-eyebrow">Portfolio Access</p>
+        <h1>Selected Work</h1>
+        <p class="privacy-note">Privacy note: Some client and partner work is intentionally not included due to privacy rights and access restrictions.</p>
+      </header>
 
-        <form id="gateForm" class="gate-form">
-          <label class="sr-only" for="password">Enter Password</label>
-          <input id="password" type="password" placeholder="Enter Password" autocomplete="off" />
-          <button type="submit">Enter</button>
-        </form>
+      <section class="work-row card" data-row>
+        <div class="row-top">
+          <h2>Product &amp; UI/UX</h2>
+        </div>
+        <div class="row-carousel">
+          <button class="row-arrow" type="button" data-dir="left" aria-label="Scroll Product and UI/UX left">&larr;</button>
+          <div class="row-track" data-track>
+            <article class="work-tile">
+              <button class="work-tile-link work-tile-trigger" type="button" data-project="storyweaver" aria-label="Open StoryWaver presentation in the portfolio">
+                <img class="work-tile-image" src="images/StoryWaver Logo.png" alt="StoryWaver logo" loading="lazy" decoding="async" />
+              </button>
+            </article>
+            <article class="work-tile">
+              <button class="work-tile-link work-tile-trigger" type="button" data-project="apiary" aria-label="Open Apiary presentation in the portfolio">
+                <img class="work-tile-image" src="images/APIARY LOGO 1 (1).png" alt="Apiary logo" loading="lazy" decoding="async" />
+              </button>
+            </article>
+            <article class="work-tile">
+              <button class="work-tile-link work-tile-trigger" type="button" data-project="insight" aria-label="Open Insight Engine 2.0 presentation in the portfolio">
+                <img class="work-tile-image work-tile-image-cmac" src="images/CMAC Logo.png" alt="CMAC logo" loading="lazy" decoding="async" />
+              </button>
+            </article>
+          </div>
+          <button class="row-arrow" type="button" data-dir="right" aria-label="Scroll Product and UI/UX right">&rarr;</button>
+        </div>
+      </section>
 
-        <p id="gateMessage" class="gate-message" aria-live="polite"></p>
-      </div>
+      <section class="work-row card" data-row>
+        <div class="row-top">
+          <h2>Brand &amp; Marketing</h2>
+        </div>
+        <div class="row-carousel">
+          <button class="row-arrow" type="button" data-dir="left" aria-label="Scroll Brand and Marketing left">&larr;</button>
+          <div class="row-track" data-track>
+            <article class="work-tile">
+              <a class="work-tile-link" href="str-graphics.html" aria-label="Open Small Town Record Visuals gallery">
+                <img class="work-tile-image work-tile-image-marketing-str" src="images/STR Logo.png" alt="STR logo" loading="lazy" decoding="async" />
+              </a>
+            </article>
+            <article class="work-tile">
+              <button class="work-tile-link work-tile-trigger" type="button" data-project="collective" aria-label="Open The Collective brand kit in the portfolio">
+                <img class="work-tile-image work-tile-image-branding-collective" src="images/The Collective Logo.png" alt="The Collective logo" loading="lazy" decoding="async" />
+              </button>
+            </article>
+          </div>
+          <button class="row-arrow" type="button" data-dir="right" aria-label="Scroll Brand and Marketing right">&rarr;</button>
+        </div>
+      </section>
+
+      <section class="work-row card" data-row>
+        <div class="row-top">
+          <h2>Strategy &amp; Research</h2>
+        </div>
+        <div class="row-carousel">
+          <button class="row-arrow" type="button" data-dir="left" aria-label="Scroll Strategy and Research left">&larr;</button>
+          <div class="row-track" data-track>
+            <article class="work-tile">
+              <button class="work-tile-link work-tile-trigger" type="button" data-project="standardAgency" aria-label="Open Standard Agency presentation in the portfolio">
+                <img class="work-tile-image work-tile-image-coursework-standard" src="images/Standard Agency Logo.png" alt="Standard Agency logo" loading="lazy" decoding="async" />
+              </button>
+            </article>
+          </div>
+          <button class="row-arrow" type="button" data-dir="right" aria-label="Scroll Strategy and Research right">&rarr;</button>
+        </div>
+      </section>
+
+      <section class="work-row card" data-row>
+        <div class="row-top">
+          <h2>Coursework</h2>
+        </div>
+        <div class="row-carousel">
+          <button class="row-arrow" type="button" data-dir="left" aria-label="Scroll Coursework left">&larr;</button>
+          <div class="row-track" data-track>
+            <article class="work-tile work-tile-writing">
+              <a class="work-tile-link work-tile-link-writing" href="creative-writing.html" aria-label="Open Creative Writing collection">
+                <span class="writing-tile-title">Creative Writing</span>
+                <span class="writing-tile-meta">4 selected pieces</span>
+              </a>
+            </article>
+            <article class="work-tile work-tile-writing">
+              <a class="work-tile-link work-tile-link-writing" href="video-journalism.html" aria-label="Open Video Journalism collection">
+                <span class="writing-tile-title">Video Journalism</span>
+                <span class="writing-tile-meta">4 video stories</span>
+              </a>
+            </article>
+          </div>
+          <button class="row-arrow" type="button" data-dir="right" aria-label="Scroll Coursework right">&rarr;</button>
+        </div>
+      </section>
     </section>
   </main>
 
+  <div class="project-modal" id="projectModal" aria-hidden="true">
+    <div class="project-modal-backdrop" data-close-modal></div>
+    <div class="project-modal-panel" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+      <button class="project-modal-close" type="button" aria-label="Close presentation">×</button>
+      <div class="project-modal-header">
+        <p class="project-modal-kicker">Presentation</p>
+        <h3 id="projectModalTitle">Project</h3>
+      </div>
+      <div class="project-modal-frame-wrap">
+        <iframe id="projectFrame" title="Project presentation" src="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script src="work.js"></script>
 </body>
 </html>
