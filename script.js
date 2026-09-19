@@ -56,11 +56,15 @@ projectTriggers.forEach((trigger) => {
     }
 
     const pdfUrl = new URL(project.src, window.location.href).toString();
-    window.location.href = pdfUrl;
-
-    if (projectModal) {
-      closeProjectModal();
+    if (!projectModal || !projectFrame || !projectModalTitle) {
+      window.location.href = pdfUrl;
+      return;
     }
+
+    projectModalTitle.textContent = project.title;
+    projectFrame.src = pdfUrl;
+    projectModal.classList.add("is-open");
+    projectModal.setAttribute("aria-hidden", "false");
   });
 });
 
