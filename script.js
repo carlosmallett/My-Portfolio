@@ -7,11 +7,6 @@ if (profilePhoto && photoFrame) {
   });
 }
 
-const buildPdfEmbedUrl = (pdfPath) => {
-  const absolutePdfUrl = new URL(pdfPath, window.location.href).toString();
-  return `https://docs.google.com/viewer?embedded=true&url=${encodeURIComponent(absolutePdfUrl)}`;
-};
-
 const projectMap = {
   storyweaver: {
     title: "StoryWaver",
@@ -56,14 +51,20 @@ projectTriggers.forEach((trigger) => {
     const key = trigger.dataset.project;
     const project = projectMap[key];
 
-    if (!projectModal || !projectModalTitle || !projectFrame || !project) {
+    if (!project) {
       return;
     }
 
-    projectModalTitle.textContent = project.title;
-    projectFrame.src = buildPdfEmbedUrl(project.src);
-    projectModal.classList.add("is-open");
-    projectModal.setAttribute("aria-hidden", "false");
+    const pdfUrl = new URL(project.src, window.location.href).toString();
+    const pdfWindow = window.open(pdfUrl, "_blank", "noopener,noreferrer");
+
+    if (!pdfWindow) {
+      window.location.href = pdfUrl;
+    }
+
+    if (projectModal) {
+      closeProjectModal();
+    }
   });
 });
 
