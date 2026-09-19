@@ -56,11 +56,7 @@ projectTriggers.forEach((trigger) => {
     }
 
     const pdfUrl = new URL(project.src, window.location.href).toString();
-    const pdfWindow = window.open(pdfUrl, "_blank", "noopener,noreferrer");
-
-    if (!pdfWindow) {
-      window.location.href = pdfUrl;
-    }
+    window.location.href = pdfUrl;
 
     if (projectModal) {
       closeProjectModal();
