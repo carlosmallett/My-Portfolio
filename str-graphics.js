@@ -96,6 +96,12 @@ const events = [
 ];
 
 const eventsRoot = document.getElementById("eventsRoot");
+const assetVersion = "20260919-5";
+
+const withAssetVersion = (path) => {
+  const separator = path.includes("?") ? "&" : "?";
+  return `${path}${separator}v=${assetVersion}`;
+};
 
 const isVideo = (path) => /\.(mov|mp4|webm)$/i.test(path);
 
@@ -156,10 +162,11 @@ const { openLightbox } = createLightbox();
 const createMedia = (path, label) => {
   const item = document.createElement("article");
   item.className = "item";
+  const resolvedPath = withAssetVersion(path);
 
   if (isVideo(path)) {
     const video = document.createElement("video");
-    video.src = path;
+    video.src = resolvedPath;
     video.controls = true;
     video.preload = "metadata";
     video.setAttribute("aria-label", label);
@@ -171,14 +178,14 @@ const createMedia = (path, label) => {
     trigger.setAttribute("aria-label", `View ${label} full size`);
 
     const img = document.createElement("img");
-    img.src = path;
+    img.src = resolvedPath;
     img.loading = "lazy";
     img.decoding = "async";
     img.alt = label;
 
     trigger.appendChild(img);
     trigger.addEventListener("click", () => {
-      openLightbox(path, label);
+      openLightbox(resolvedPath, label);
     });
 
     item.appendChild(trigger);
